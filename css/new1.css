@@ -62,7 +62,7 @@ img {
     grid-area: contacts;
  }
  
- @media (min-width: 499px) {
+ @media (min-width: 599px) {
    .card {
      grid-template-columns: 1fr;
      grid-template-areas: "portrait" "info";
@@ -73,3 +73,40 @@ img {
      padding: 10px;
    }
  }
+
+ @media (min-width: 768px) {
+    .card {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "portrait name-job"
+        "portrait contacts";
+      padding: 0;
+    }
+  
+    .portrait {
+      grid-area: portrait;
+      width: 100%;
+      height: auto; /* maintain aspect ratio */
+    }
+  
+    .info {
+      grid-area: name-job;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .name-job {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .contacts {
+      grid-area: contacts;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
