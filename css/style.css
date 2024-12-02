@@ -1,33 +1,95 @@
-.circle img {
-    display: grid;
-    grid-gap: 5px;
-    border-radius: 50%; /* Makes the image circular */
-    /
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
-.Dale {
-    max-width: 100%; /* Ensures the image scales properly */
-    max-height: 100%; /* Keeps the image within the viewport */
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  max-width: 900px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-job, .number-company {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.job, .phone, .company {
+  font-size: 1.1em;
+}
+
+@media (min-width: 599px)  {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    margin-bottom: 10px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .name-job,
+  .number-country {
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
-    gap: 10px; /* Space between grid items */
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    height: 100vh; /* Ensure enough height for vertical centering */
-    *grid-template-areas:
-      "job-name job-name"
-   }
-  
-.grid-item {
-    background-color: lightblue;
-    padding: 20px;
-    gap: 10px;
-    text-align: center;
-    justify-content: center;
-    border: 2cap solid #ddd;
+  .contact-card {
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
- 
-  
-  
+
+  .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+  }
+
+  .contact-info {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .name-job, .number-company {
+      margin-bottom: 6px;
+  }
+}
+
+
+
+

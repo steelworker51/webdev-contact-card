@@ -1,3 +1,4 @@
+
 body,
 html {
   height: 100%;
@@ -9,7 +10,7 @@ html {
 }
 
 .card {
-  background-color: white;
+  background-color: cornsilk;
   padding-left: 20px;
   border-radius: 10px;
   width: 80%;
@@ -17,6 +18,9 @@ html {
   max-width: 600px;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-areas:  "portrait portrait";
+                        "name-job name-job"
+                        "contacts contacts"
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -61,11 +65,15 @@ img {
 .contacts {
     grid-area: contacts;
  }
- 
+
+
  @media (min-width: 599px) {
    .card {
-     grid-template-columns: 1fr;
-     grid-template-areas: "portrait" "info";
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-areas: "portrait"
+                          "name-job"
+                          "contacts";
      padding: 0;
    }
    .info {
@@ -87,7 +95,7 @@ img {
     .portrait {
       grid-area: portrait;
       width: 100%;
-      height: auto; /* maintain aspect ratio */
+      height: auto; 
     }
   
     .info {
