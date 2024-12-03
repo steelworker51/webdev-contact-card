@@ -60,20 +60,35 @@ body {
 
 @media (min-width: 600px) {
     .card {
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+    .profile-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    }
+    /*.profile-main {
+        flex-direction: row;
     }
     .profile-name {
         text-align: left;
+        align-self: stretch;
+        
     }
     .profile-position {
         text-align: left;
+        align-items: center;
     }
     .profile-phonenumber {
         text-align: end ;
+        align-items:center;
     }
     .profile-company {
         text-align: end;
-    }
+        align-items:center;
+    }*/
 }
 
 @media (min-width: 768px) {
