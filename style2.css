@@ -1,3 +1,5 @@
+@import url(css/reset.css);
+
 * {
     box-sizing: border-box;
 }
@@ -63,23 +65,23 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    .profile-main {
+    }
+    .profile-sidebar {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
-    }
-    /*.profile-main {
-        flex-direction: row;
-    }
+    
     .profile-name {
         text-align: left;
-        align-self: stretch;
+        align-items: center;
+        order: 1;
         
     }
     .profile-position {
         text-align: left;
         align-items: center;
+        order: 4;
     }
     .profile-phonenumber {
         text-align: end ;
@@ -88,11 +90,25 @@ body {
     .profile-company {
         text-align: end;
         align-items:center;
-    }*/
+    }
 }
 
 @media (min-width: 768px) {
     .card{
         flex-direction: row;
     }
+    .profile-main {
+        display: flex:
+        flex-direction: row;
+    }
+    .profile-name {
+        margin-bottom: 40px;
+    }
+    .profile-position {
+        margin-bottom: 100px;
+    }
+    .profile-phonenumber {
+        margin-bottom: 40px;
+    }
+
 }
